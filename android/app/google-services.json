@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "246504893636",
+    "project_id": "onenation-hub-924d1",
+    "storage_bucket": "onenation-hub-924d1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246504893636:android:eac3d456c2b83a745ded91",
+        "android_client_info": {
+          "package_name": "com.example.onenation_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBDeOL9mSB78SOhWlURZWQ5s_rABUEO3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

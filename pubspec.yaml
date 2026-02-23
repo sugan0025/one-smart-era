@@ -1,0 +1,46 @@
+name: onenation_hub
+description: "OneNation Hub – Smart City Complaints App"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '^3.11.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Map + Location
+  flutter_map: ^8.0.0
+  latlong2: ^0.9.1
+  geolocator: ^14.0.2
+  geocoding: ^4.0.0
+
+  # Firebase 
+  firebase_core: ^4.4.0
+  firebase_auth: ^6.1.4
+  cloud_firestore: ^6.1.2
+  firebase_storage: ^13.0.6
+
+  # Camera / Image
+  image_picker: ^1.2.1
+  
+  # Formatting
+  intl: ^0.20.2
+
+  # Network & External Links
+  url_launcher: ^6.3.2
+  http: ^1.6.0
+
+  # Local Storage & Database
+  shared_preferences: ^2.5.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
