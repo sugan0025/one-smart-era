@@ -4874,7 +4874,7 @@ class _PublicHomeScreenState extends State<PublicHomeScreen> {
                             icon: Icons.headset_mic_rounded,
                             label: t('cm_cell'),
                             color: const Color(0xFFE9C46A),
-                            onTap: () => _launchUrl('https://cm.tn.gov.in'),
+                            onTap: () => _launchUrl('https://cmhelpline.tnega.org/portal/en/home'),
                           ),
                           _ServiceTile(
                             icon: Icons.bolt_rounded,
