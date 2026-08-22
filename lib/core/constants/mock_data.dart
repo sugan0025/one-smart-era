@@ -1,0 +1,267 @@
+/// Mock and Seed Data for Offline and Demonstration Scenarios
+class MockData {
+  static const Map<String, Map<String, dynamic>> mandiData = {
+    'Erode': {
+      'name': 'Erode APMC Mandi',
+      'lat': 11.3410,
+      'lng': 77.7172,
+      'distance': '45 km',
+    },
+    'Sathyamangalam': {
+      'name': 'Sathy Farmers Market',
+      'lat': 11.5034,
+      'lng': 77.2387,
+      'distance': '2 km',
+    },
+    'Gobichettipalayam': {
+      'name': 'Gobi APMC Mandi',
+      'lat': 11.4520,
+      'lng': 77.4350,
+      'distance': '18 km',
+    },
+    'Coimbatore': {
+      'name': 'Coimbatore APMC Mandi',
+      'lat': 11.0168,
+      'lng': 76.9558,
+      'distance': '60 km',
+    },
+    'Salem': {
+      'name': 'Salem APMC Mandi',
+      'lat': 11.6643,
+      'lng': 78.1460,
+      'distance': '82 km',
+    },
+    'Default': {
+      'name': 'Nearest Mandi (Demo)',
+      'lat': 11.5034,
+      'lng': 77.3000,
+      'distance': '5 km',
+    },
+  };
+
+  static const Map<String, List<Map<String, dynamic>>> agmarknetData = {
+    'Erode': [
+      {
+        'name': 'Tomato',
+        'price': 38.0,
+        'predicted': 41.0,
+        'demand': 'High',
+        'history': [32.0, 34.0, 36.0, 35.0, 38.0],
+      },
+      {
+        'name': 'Onion',
+        'price': 28.0,
+        'predicted': 25.0,
+        'demand': 'Medium',
+        'history': [25.0, 27.0, 29.0, 28.0, 28.0],
+      },
+      {
+        'name': 'Banana',
+        'price': 22.0,
+        'predicted': 24.0,
+        'demand': 'High',
+        'history': [19.0, 20.0, 21.0, 21.5, 22.0],
+      },
+      {
+        'name': 'Turmeric',
+        'price': 95.0,
+        'predicted': 102.0,
+        'demand': 'High',
+        'history': [88.0, 90.0, 92.0, 94.0, 95.0],
+      },
+      {
+        'name': 'Coconut',
+        'price': 18.0,
+        'predicted': 17.0,
+        'demand': 'Medium',
+        'history': [20.0, 19.0, 18.5, 18.0, 18.0],
+      },
+    ],
+    'Sathyamangalam': [
+      {
+        'name': 'Tomato',
+        'price': 34.0,
+        'predicted': 37.0,
+        'demand': 'High',
+        'history': [28.0, 30.0, 32.0, 33.0, 34.0],
+      },
+      {
+        'name': 'Brinjal',
+        'price': 24.0,
+        'predicted': 27.0,
+        'demand': 'High',
+        'history': [20.0, 21.0, 22.0, 23.0, 24.0],
+      },
+      {
+        'name': 'Banana',
+        'price': 20.0,
+        'predicted': 22.0,
+        'demand': 'Medium',
+        'history': [17.0, 18.0, 19.0, 19.5, 20.0],
+      },
+      {
+        'name': 'Onion',
+        'price': 26.0,
+        'predicted': 23.0,
+        'demand': 'Medium',
+        'history': [24.0, 25.0, 26.0, 26.0, 26.0],
+      },
+      {
+        'name': 'Coconut',
+        'price': 16.0,
+        'predicted': 18.0,
+        'demand': 'High',
+        'history': [14.0, 15.0, 15.5, 16.0, 16.0],
+      },
+    ],
+    'Default': [
+      {
+        'name': 'Tomato',
+        'price': 35.0,
+        'predicted': 38.0,
+        'demand': 'High',
+        'history': [30.0, 31.0, 33.0, 34.0, 35.0],
+      },
+      {
+        'name': 'Onion',
+        'price': 25.0,
+        'predicted': 22.0,
+        'demand': 'Medium',
+        'history': [22.0, 23.0, 25.0, 25.0, 25.0],
+      },
+      {
+        'name': 'Potato',
+        'price': 30.0,
+        'predicted': 32.0,
+        'demand': 'High',
+        'history': [27.0, 28.0, 29.0, 30.0, 30.0],
+      },
+      {
+        'name': 'Brinjal',
+        'price': 20.0,
+        'predicted': 24.0,
+        'demand': 'High',
+        'history': [16.0, 17.0, 18.0, 19.0, 20.0],
+      },
+      {
+        'name': 'Banana',
+        'price': 18.0,
+        'predicted': 17.0,
+        'demand': 'Medium',
+        'history': [19.0, 18.5, 18.0, 18.0, 18.0],
+      },
+    ],
+  };
+
+  static const List<Map<String, dynamic>> warehouseData = [
+    {
+      'id': 'wh1',
+      'name': 'Sathyamangalam Cold Storage',
+      'location': 'Market Road, Sathy',
+      'lat': 11.5034,
+      'lng': 77.2387,
+      'capacity': 500,
+      'used': 320,
+      'crops': ['Tomato', 'Onion', 'Banana'],
+    },
+    {
+      'id': 'wh2',
+      'name': 'Erode APMC Warehouse',
+      'location': 'NH-544, Erode',
+      'lat': 11.3410,
+      'lng': 77.7172,
+      'capacity': 800,
+      'used': 450,
+      'crops': ['Turmeric', 'Onion', 'Coconut'],
+    },
+    {
+      'id': 'wh3',
+      'name': 'Gobi Farmers Aggregation Center',
+      'location': 'Bhavani Road, Gobichettipalayam',
+      'lat': 11.4520,
+      'lng': 77.4350,
+      'capacity': 350,
+      'used': 180,
+      'crops': ['Sugarcane', 'Tomato', 'Potato'],
+    },
+  ];
+
+  static const List<Map<String, dynamic>> wardData = [
+    {
+      'id': 'w1',
+      'name': 'Market Road Area',
+      'ward': 'Ward 1',
+      'officer': 'Mr. Rajan Kumar',
+      'center_lat': 11.5034,
+      'center_lng': 77.2387,
+      'radius': 0.015,
+      'resolved_month': 8,
+      'open_issues': 3,
+    },
+    {
+      'id': 'w2',
+      'name': 'Bus Stand Colony',
+      'ward': 'Ward 2',
+      'officer': 'Ms. Priya Devi',
+      'center_lat': 11.5090,
+      'center_lng': 77.2410,
+      'radius': 0.012,
+      'resolved_month': 5,
+      'open_issues': 1,
+    },
+    {
+      'id': 'w3',
+      'name': 'Bannari Road Junction',
+      'ward': 'Ward 3',
+      'officer': 'Mr. Selvam G',
+      'center_lat': 11.4970,
+      'center_lng': 77.2320,
+      'radius': 0.018,
+      'resolved_month': 11,
+      'open_issues': 4,
+    },
+    {
+      'id': 'w4',
+      'name': 'Bhavani River Bank',
+      'ward': 'Ward 4',
+      'officer': 'Mrs. Kavitha M',
+      'center_lat': 11.5120,
+      'center_lng': 77.2500,
+      'radius': 0.014,
+      'resolved_month': 7,
+      'open_issues': 2,
+    },
+    {
+      'id': 'w5',
+      'name': 'Town Hall & North Colony',
+      'ward': 'Ward 5',
+      'officer': 'Mr. Anbarasan P',
+      'center_lat': 11.5060,
+      'center_lng': 77.2350,
+      'radius': 0.010,
+      'resolved_month': 9,
+      'open_issues': 0,
+    },
+  ];
+
+  static const List<String> advisories = [
+    '🌾 Advisory: Expect light showers on Wednesday. Plan irrigation accordingly.',
+    '🍅 Tomato prices projected to rise 8% next week. Consider holding stock.',
+    '🐛 Pest Alert: Fall armyworm reported in Ward 3 corn fields. Spray neem oil early.',
+    '💡 APMC Sathy: Direct farmer procurement counters open daily from 6 AM.',
+    '❄️ Cold Storage Subsidy: 40% discount available for cooperative members this month.',
+  ];
+
+  static const Map<String, String> cropOptionsTamil = {
+    'Tomato': 'தக்காளி',
+    'Onion': 'வெங்காயம்',
+    'Potato': 'உருளைக்கிழங்கு',
+    'Brinjal': 'கத்தரிக்காய்',
+    'Banana': 'வாழைப்பழம்',
+    'Turmeric': 'மஞ்சள்',
+    'Coconut': 'தேங்காய்',
+    'Sugarcane': 'கரும்பு',
+    'Paddy': 'நெல்',
+    'Chilli': 'மிளகாய்',
+  };
+}

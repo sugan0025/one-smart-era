@@ -36,6 +36,7 @@ dependencies:
 
   # Local Storage & Database
   shared_preferences: ^2.5.4
+  crypto: ^3.0.6
 
 dev_dependencies:
   flutter_test:
