@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // 1. User profiles (Private read/write per user)
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(userId) || (isAuthenticated() && request.auth.token.role == 'Admin');
+    }
+
+    // 2. Civic & Agro Reports
+    match /reports/{reportId} {
+      // Anyone can read reports (for public city/agro dashboard)
+      allow read: if true;
+      // Allow creation if payload includes valid phone and title
+      allow create: if request.resource.data.title is string &&
+                    request.resource.data.phone is string;
+      // Only authenticated users or admins can update/delete
+      allow update, delete: if isAuthenticated();
+    }
+
+    // 3. Mandi Logistics & Produce Listings
+    match /logistics/{logisticsId} {
+      allow read: if true;
+      allow create: if request.resource.data.farmerName is string;
+      allow update, delete: if isAuthenticated();
+    }
+
+    // 4. Default catch-all rule: Deny all unauthenticated write access
+    match /{document=**} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+  }
+}

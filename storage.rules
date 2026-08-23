@@ -1,0 +1,12 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /reports/{imageId} {
+      // Anyone can view uploaded civic & crop pathology photos
+      allow read: if true;
+      // Only allow image files under 10MB
+      allow write: if request.resource.size < 10 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+  }
+}

@@ -71,12 +71,15 @@ class AuthService {
     final cleanId = identifier.trim();
     final hashed = hashPassword(password.trim());
 
-    // 1. Check Demo Accounts First
+    // 1. Check Demo Accounts (Password bypass strictly restricted to Debug Mode)
     for (final demo in demoUsers) {
-      if ((demo.phone == cleanId || demo.email == cleanId || demo.uid == cleanId) &&
-          (demo.passwordHash == hashed || password == '123456' || password == 'admin123')) {
-        await saveSession(demo);
-        return demo;
+      if (demo.phone == cleanId || demo.email == cleanId || demo.uid == cleanId) {
+        final isPasswordValid = demo.passwordHash == hashed ||
+            (kDebugMode && (password.trim() == '123456' || password.trim() == 'admin123'));
+        if (isPasswordValid) {
+          await saveSession(demo);
+          return demo;
+        }
       }
     }
 
